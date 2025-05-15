@@ -19,7 +19,7 @@ const monstersTable = pgTable('monsters', {
   description: text('description'),
   kill_by: integer('kill_by'),
 
-  // foreign key 約束（對應 Prisma 的 @relation）
+  // foreign key 約束
 }, (table) => ({
   fk_killer_hero: {
     columns: [table.kill_by],
